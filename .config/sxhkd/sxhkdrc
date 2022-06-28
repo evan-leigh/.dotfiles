@@ -1,0 +1,51 @@
+# Restart hotkey daemon
+control + shift + alt + h
+  pkill -USR1 -x sxhkd && notify-send "sxhkd Restarted"
+
+# Toggle polybar visibility
+control + alt + p
+  $HOME/scripts/toggle-polybar.sh
+
+# Screenshot display
+Print 
+  $HOME/scripts/screenshot.sh
+
+# Random wallpaper
+F12
+  feh --bg-fill --randomize ~/.wallpapers/art/*
+  # feh --bg-fill --randomize ~/.wallpapers/space/*
+  # feh --bg-fill --randomize ~/.wallpapers/anime/*
+  # feh --bg-fill --randomize ~/.wallpapers/nature/*
+
+# Disable Wallpaper
+shift + F12
+  feh --bg-fill ~/wallpapers/#000000.png
+
+# Screenshot selection
+shift + Print 
+  $HOME/scripts/screenshot select
+
+# Screenshot window
+control + Print 
+  $HOME/scripts/screenshot window
+
+# Show desktop apps
+alt + d 
+  rofi -show drun -modi drun
+
+# Show desktop apps
+alt + shift + d 
+  rofi -show run -modi run
+
+# Show emojis
+alt + period
+  rofi -show emoji -modi emoji
+
+
+# Open color picker
+alt + shift + c
+  gpick -o -s --no-newline | xclip -sel c
+
+# Volume control
+alt + {Prior,Next}
+    amixer sset Master {5%+,5%-} unmute

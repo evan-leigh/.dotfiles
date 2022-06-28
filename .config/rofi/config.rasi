@@ -1,0 +1,9 @@
+configuration {
+  /* font: "Jetbrains Mono Semibold 10"; */
+  /* font: "Dina TTF Bold 10"; */
+  font: "Iosevka Bold 10";
+  /* font: "Inconsolata 12"; */
+  show-icons: false;
+}
+
+@theme "themes/onedark"
